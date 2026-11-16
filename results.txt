@@ -1,0 +1,119 @@
+Test 1:
+Elapsed CPU Time (DataTimer) = 7.14 sec.
+Elapsed CPU Time per Iteration (DataTimer, 400) = 1.784230e-02 sec.
+Elapsed CPU Time (CalcTimer) = 0.24 sec.
+Elapsed CPU Time per Iteration (CalcTimer, 40000) = 5.994425e-06 sec.
+move fopen to top disabled 
+2000000 data lines processed, the least square line is : Y = 1.26393 * X + 0.823035
+Elapsed CPU Time (DataTimer) = 7.56 sec.
+Elapsed CPU Time per Iteration (DataTimer, 400) = 1.889922e-02 sec.
+Elapsed CPU Time (CalcTimer) = 0.23 sec.
+Elapsed CPU Time per Iteration (CalcTimer, 40000) = 5.753275e-06 sec.
+move fopen to top disabled 
+2000000 data lines processed, the least square line is : Y = 1.26393 * X + 0.823035
+Elapsed CPU Time (DataTimer) = 7.55 sec.
+Elapsed CPU Time per Iteration (DataTimer, 400) = 1.886861e-02 sec.
+Elapsed CPU Time (CalcTimer) = 0.23 sec.
+Elapsed CPU Time per Iteration (CalcTimer, 40000) = 5.787900e-06 sec.
+move fopen to top disabled 
+2000000 data lines processed, the least square line is : Y = 1.26393 * X + 0.823035
+Average CPU: 0.23 sec | Average DATA: 7.42 sec
+
+Test 2:
+Elapsed CPU Time (DataTimer) = 15.03 sec.
+Elapsed CPU Time per Iteration (DataTimer, 800) = 1.878929e-02 sec.
+Elapsed CPU Time (CalcTimer) = 0.47 sec.
+Elapsed CPU Time per Iteration (CalcTimer, 80000) = 5.919613e-06 sec.
+move fopen to top disabled 
+4000000 data lines processed, the least square line is : Y = 1.26393 * X + 0.823035
+Elapsed CPU Time (DataTimer) = 15.23 sec.
+Elapsed CPU Time per Iteration (DataTimer, 800) = 1.903978e-02 sec.
+Elapsed CPU Time (CalcTimer) = 0.47 sec.
+Elapsed CPU Time per Iteration (CalcTimer, 80000) = 5.823063e-06 sec.
+move fopen to top disabled 
+4000000 data lines processed, the least square line is : Y = 1.26393 * X + 0.823035
+Elapsed CPU Time (DataTimer) = 14.90 sec.
+Elapsed CPU Time per Iteration (DataTimer, 800) = 1.861975e-02 sec.
+Elapsed CPU Time (CalcTimer) = 0.47 sec.
+Elapsed CPU Time per Iteration (CalcTimer, 80000) = 5.827162e-06 sec.
+move fopen to top disabled 
+4000000 data lines processed, the least square line is : Y = 1.26393 * X + 0.823035
+Average CPU: 0.47 sec | Average DATA: 15.05 sec
+
+Test 3:
+Elapsed CPU Time (DataTimer) = 0.02 sec.
+Elapsed CPU Time per Iteration (DataTimer, 400) = 4.317500e-05 sec.
+Elapsed CPU Time (CalcTimer) = 0.00 sec.
+Elapsed CPU Time per Iteration (CalcTimer, 40000) = 3.050000e-09 sec.
+move fopen to top enabled 
+5000 data lines processed, the least square line is : Y = -nan * X + -nan
+Elapsed CPU Time (DataTimer) = 0.02 sec.
+Elapsed CPU Time per Iteration (DataTimer, 400) = 4.684000e-05 sec.
+Elapsed CPU Time (CalcTimer) = 0.00 sec.
+Elapsed CPU Time per Iteration (CalcTimer, 40000) = 2.875000e-09 sec.
+move fopen to top enabled 
+5000 data lines processed, the least square line is : Y = -nan * X + -nan
+Elapsed CPU Time (DataTimer) = 0.02 sec.
+Elapsed CPU Time per Iteration (DataTimer, 400) = 4.609000e-05 sec.
+Elapsed CPU Time (CalcTimer) = 0.00 sec.
+Elapsed CPU Time per Iteration (CalcTimer, 40000) = 5.950000e-09 sec.
+move fopen to top enabled 
+5000 data lines processed, the least square line is : Y = -nan * X + -nan
+Average CPU: 0.00 sec | Average DATA: 0.02 sec
+
+Test 4:
+Elapsed CPU Time (DataTimer) = 0.02 sec.
+Elapsed CPU Time per Iteration (DataTimer, 800) = 2.370750e-05 sec.
+Elapsed CPU Time (CalcTimer) = 0.00 sec.
+Elapsed CPU Time per Iteration (CalcTimer, 80000) = 3.350000e-09 sec.
+move fopen to top enabled 
+5000 data lines processed, the least square line is : Y = -nan * X + -nan
+Elapsed CPU Time (DataTimer) = 0.02 sec.
+Elapsed CPU Time per Iteration (DataTimer, 800) = 2.173500e-05 sec.
+Elapsed CPU Time (CalcTimer) = 0.00 sec.
+Elapsed CPU Time per Iteration (CalcTimer, 80000) = 8.812500e-09 sec.
+move fopen to top enabled 
+5000 data lines processed, the least square line is : Y = -nan * X + -nan
+Elapsed CPU Time (DataTimer) = 0.02 sec.
+Elapsed CPU Time per Iteration (DataTimer, 800) = 2.205000e-05 sec.
+Elapsed CPU Time (CalcTimer) = 0.00 sec.
+Elapsed CPU Time per Iteration (CalcTimer, 80000) = 3.050000e-09 sec.
+move fopen to top enabled 
+5000 data lines processed, the least square line is : Y = -nan * X + -nan
+Average CPU: 0.00 sec | Average DATA: 0.02 sec
+
+Test 5:
+Elapsed CPU Time (DataTimer) = 1.55 sec.
+Elapsed CPU Time per Iteration (DataTimer, 400) = 3.884370e-03 sec.
+Elapsed CPU Time (CalcTimer) = 0.52 sec.
+Elapsed CPU Time per Iteration (CalcTimer, 40000) = 1.288345e-05 sec.
+2000400 data lines processed, the best least squares line is: Y = 1.26393 * X + 0.823035
+Elapsed CPU Time (DataTimer) = 1.56 sec.
+Elapsed CPU Time per Iteration (DataTimer, 400) = 3.894895e-03 sec.
+Elapsed CPU Time (CalcTimer) = 0.52 sec.
+Elapsed CPU Time per Iteration (CalcTimer, 40000) = 1.292455e-05 sec.
+2000400 data lines processed, the best least squares line is: Y = 1.26393 * X + 0.823035
+Elapsed CPU Time (DataTimer) = 1.57 sec.
+Elapsed CPU Time per Iteration (DataTimer, 400) = 3.934515e-03 sec.
+Elapsed CPU Time (CalcTimer) = 0.51 sec.
+Elapsed CPU Time per Iteration (CalcTimer, 40000) = 1.286140e-05 sec.
+2000400 data lines processed, the best least squares line is: Y = 1.26393 * X + 0.823035
+Average CPU: 0.52 sec | Average DATA: 1.56 sec
+
+Test 6:
+Elapsed CPU Time (DataTimer) = 3.16 sec.
+Elapsed CPU Time per Iteration (DataTimer, 800) = 3.955590e-03 sec.
+Elapsed CPU Time (CalcTimer) = 1.03 sec.
+Elapsed CPU Time per Iteration (CalcTimer, 80000) = 1.284441e-05 sec.
+4000800 data lines processed, the best least squares line is: Y = 1.26393 * X + 0.823035
+Elapsed CPU Time (DataTimer) = 3.14 sec.
+Elapsed CPU Time per Iteration (DataTimer, 800) = 3.920697e-03 sec.
+Elapsed CPU Time (CalcTimer) = 1.03 sec.
+Elapsed CPU Time per Iteration (CalcTimer, 80000) = 1.282979e-05 sec.
+4000800 data lines processed, the best least squares line is: Y = 1.26393 * X + 0.823035
+Elapsed CPU Time (DataTimer) = 3.07 sec.
+Elapsed CPU Time per Iteration (DataTimer, 800) = 3.831996e-03 sec.
+Elapsed CPU Time (CalcTimer) = 1.03 sec.
+Elapsed CPU Time per Iteration (CalcTimer, 80000) = 1.281283e-05 sec.
+4000800 data lines processed, the best least squares line is: Y = 1.26393 * X + 0.823035
+Average CPU: 1.03 sec | Average DATA: 3.12 sec

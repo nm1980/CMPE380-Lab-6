@@ -1,0 +1,107 @@
+The purpose of this laboratory assignment was to develop a reusable model
+of Timers.h with timing macros for the use of performance timing for CPU
+and DATA approaches in both C and C++ coding. The main implementations done
+for Timers.h included declaring a timer separate from the repeat
+loop(create new variable V), beginning and ending the repeat timer (wrapping
+and executing the code R times), and printing the timer values in terms of
+both total time (Elapsed time/Clocks per second) and the time per iteration
+((Elapsed time/Clocks per second)/(Total count R)). The macros in Timers.h
+were used to create a zero-overhead timing framework that conditionally
+expands into the inline clock() tracking statements and inside of for loops
+while EN_TIME was defined, and also allows for functionality if EN_TIME
+isn’t included. Timers.h was then tested using sleep.c, another file that
+simply does a 60-second delay test to verify functionality of Timers.h,
+with it initializing the timer, starting the timer, ending the timer, and
+then printing out the results from it. Functions from Timers.h were then
+included inside of both C and C++ programs, which both find a line best fit
+based on the data point provided from a text file using both time data I/O
+operations and standard CPU calculations. Two separate timers, DataTimer
+and CalcTimer, were initialized in hw6c (the C file) using DECLARE_TIMER
+alongside their repeating variable and then later used in hw6cp (the C++
+file). Macro variables for the repeating values for Data and Calc were
+also initialized. The timers for both data and calc operations were started
+at the beginning of their code where they are executed using START_TIMER,
+then END_REPEATING_TIMING along with STOP_TIMER were called after the code
+execution for both operations, and then the results were printed using
+PRINT_TIMER and PRINT_RTIMER before the file is closed. To test the
+functionality of the C and C++ programs, several tests were performed
+using different loop counter values and options in the C code. For all
+these tests, the basic count values for the data looping counter was 400
+and the calculated looping counter was 40000. Test 1 was performed on the
+C code with no MOVE_FOPEN options. Running test 1 three times got an
+average CPU timing value of 0.23 seconds, and an average DATA timing value
+of 7.42 seconds, with the least square line being determined as “Y =
+1.26393 * X + 0.823035”. Test 2 was performed again using the C code but
+instead doubled the counter for both CPU and DATA (800 and 80000 now).
+Running test 2 three times got an average CPU timing value of 0.47 seconds
+and average DATA timing value of 15.05 seconds. The per loop times for the
+CPU and DATA remained relatively the same when doubling the loop count with
+no MOVE_FOPEN option for test 1 and test 2, with both averaging around 1.88
+seconds. This is since the fopen and fclose remain inside the timing loop
+while MOVE_FOPEN is disabled, meaning each loop iteration does around the
+same workload regardless of the increased counter. Essentially the amount
+of work for each loop is relatively the same so increasing the counter
+doesn’t change anything noticeable. The total time for the CPU and DATA did
+increase when the loop count was doubled, with the averages now being almost
+doubled what they were originally with the 400/40000 loop count. This can
+simply be explained by the fact that increasing the repetition constant just
+causes both timing loops to do twice the amount of work, and doesn’t have
+any other major changes with the timings. Test 3 was run using the C code
+but now included the “MOVE_FOPEN” option inside of the compile command.
+Running test 2 three times got an average CPU timing value of 0.00 seconds
+and average DATA timing value of 0.02 seconds, with the least square line
+evaluated being Y = -nan * X + -nan. Test 4 was run the same as test 3 but
+now doubled the counter for DATA and CPU. Running test 4 three times got an
+average CPU timing value of 0.00 seconds and average DATA timing value of
+0.02 seconds. For test 3 and test 4, the per loop times for DATA was halved
+when doubling the loop count with the MOVE_FOPEN option, decreasing from
+around 4.6 to 2.3 seconds, and the per loop times for CPU remained the same,
+with it being a number very small/close to 0. Just like with the previous
+tests, the total execution time per instruction doesn’t change much when
+increasing the count and stays mostly the same. The total times for both
+CPU and DATA remained the same when doubling the loop count, with DATA
+averaging 0.02 seconds, and CPU averaging 0.00 seconds (small number close
+to 0). This is since moving fopen outside the timing loop causes fscanf to
+read the file to the end of it on the first loop pass, so during the rest
+of the looping, fscanf immediately returns to the end of the file without
+doing I/O or memory operations. No extra work was done after the first
+loop, so doubling the loop count doesn’t change the execution time. These
+results aren’t valid, as seen in the returned line “Y = -nan * X + -nan”
+since moving fopen to outside of the loop breaks the program logic, as
+now the dynamic arrays were reset without re-reading the input stream on
+later loops, so the calculations for the rest of the dataset after the first
+loop become corrupt and resulted in the nan outputs for Y and X. If the
+measure of the performance of the code doesn’t work, it means the results
+from this are invalid/incorrect no matter what, and it's more important to
+ensure correctness rather than trying to optimize the code to run faster.
+With the C code fully tested, test 5 instead uses the C++ code without any
+alterations. Running test 5 three times got an average CPU timing value of
+0.52 seconds and average DATA timing value of 1.56 seconds. Compared to
+test 1, test 5 with the C++ code performed much better in terms of the
+speed of I/O and calculations compared to C in terms of the DATA tests, with
+C++ having an average time of 1.56 seconds compared to C’s time of 7.54
+seconds. This is since in the C++ implementation, linked data structures and
+list nodes were allowed to be allocated repeatedly without copying and
+reallocating full array buffers when taking in file data. However, the
+speeds for the CPU calculations on C++ were slightly slower compared to
+C, with C++ having an average speed of 0.52 seconds compared to the C’s
+0.23 seconds. This is since the C++ implementation uses doubly linked lists
+for node traversal and pointer chasing, which takes longer to perform
+compared to C’s implementation of iterating across dynamic array memory and
+using the full advantages of the CPU’s cache prefetching and sequential
+memory access. The last test, test 6, uses the C++ code again but doubles
+the loop count for both DATA and CPU again. Running test 6 three times got
+an average CPU timing value of 1.03 seconds and average DATA timing value
+of 3.12 seconds. Compared to test 5, doubling the loop count for the C++
+code in test 6 kept the per loop counts the same, with CPU averaging
+around 1.28 per iteration and DATA averaging around 3.89 per iteration.
+However, the average CPU and DATA times did double when increasing the
+loop count, now averaging 1.03 seconds for the CPU and 3.12 seconds for the
+DATA. This is also explained by the fact that doubling the loop count also
+doubles the amount of work needed in the C++ code to compute these values,
+and displays the C++ code functionality of linear scaling based on the
+loop counter. Overall this assignment demonstrates the utility of
+macro-based timing processes within C and how the data structures and
+languages used within coding determines the performance of the program,
+with C++ containers minimizing I/O allocation while C dynamic arrays
+benefited most from mathematical calculations within the CPU.

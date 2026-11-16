@@ -1,0 +1,13 @@
+------- Running C line program ------
+Elapsed CPU Time (DataTimer) = 0.02 sec.
+Elapsed CPU Time per Iteration (DataTimer, 400) = 4.925750e-05 sec.
+Elapsed CPU Time (CalcTimer) = 0.00 sec.
+Elapsed CPU Time per Iteration (CalcTimer, 40000) = 1.005000e-08 sec.
+move fopen to top enabled 
+5000 data lines processed, the least square line is : Y = -nan * X + -nan
+------- Running CPP line program ------
+Elapsed CPU Time (DataTimer) = 1.61 sec.
+Elapsed CPU Time per Iteration (DataTimer, 400) = 4.012702e-03 sec.
+Elapsed CPU Time (CalcTimer) = 0.51 sec.
+Elapsed CPU Time per Iteration (CalcTimer, 40000) = 1.281110e-05 sec.
+2000400 data lines processed, the best least squares line is: Y = 1.26393 * X + 0.823035
